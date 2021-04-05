@@ -98,15 +98,15 @@ print (np.shape (test_label))
 
 
 
-sio.savemat( 'uci_eeg_train_within_8.mat',
+sio.savemat( 'uci_eeg_train_within.mat',
             {'data':  train_data, 'label_alcoholism':np.reshape(train_label[:,0],(-1,1)), 
              'label_stimulus': np.reshape(train_label[:,1],(-1,1)), 'label_id':np.reshape(train_label[:,2],(-1,1))})
 
-sio.savemat( 'uci_eeg_test_within_1.mat',
+sio.savemat( 'uci_eeg_test_within.mat',
             {'data':  test_data, 'label_alcoholism':np.reshape(test_label[:,0],(-1,1)), 
              'label_stimulus':np.reshape(test_label[:,1],(-1,1)), 'label_id':np.reshape(test_label[:,2],(-1,1))})
 
-sio.savemat( 'uci_eeg_validation_within_1.mat',
+sio.savemat( 'uci_eeg_validation_within.mat',
             {'data':  val_data, 'label_alcoholism':np.reshape(val_label[:,0],(-1,1)), 
              'label_stimulus': np.reshape(val_label[:,1],(-1,1)), 'label_id':np.reshape(val_label[:,2],(-1,1))})
 
