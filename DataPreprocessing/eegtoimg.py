@@ -217,12 +217,12 @@ if __name__ == '__main__':
     for s in ('train','test','validation'):
         mat = sio.loadmat('uci_eeg_'+ s +'_within.mat')
         
-        data = mat['data']
+        data = mat['data'] # 8797 x 256 x 64
         label_alcoholic = mat['label_alcoholism']
         label_stimulus = mat['label_stimulus']
         label_id = mat['label_id']
         
-        tras_X = np.transpose(data, (0, 2, 1))
+        tras_X = np.transpose(data, (0, 2, 1)) # 8797 x 64 X 256
         print (np.shape(tras_X))
         #visual_one_eeg (tras_X[0], "One-eeg-plot.png")
         
